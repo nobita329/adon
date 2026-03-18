@@ -10,8 +10,6 @@ sudo mv /root/adon/Email/AddedToServer.php /var/www/pterodactyl/app/Notification
 sudo mv /root/adon/Email/RemovedFromServer.php /var/www/pterodactyl/app/Notifications/
 sudo mv /root/adon/Email/ServerInstalled.php /var/www/pterodactyl/app/Notifications/
 sudo mv /root/adon/Email/MailTested.php /var/www/pterodactyl/app/Notifications/
-
-
 cd /var/www/pterodactyl
 unzip 1.zip
 COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --optimize-autoloader
@@ -20,3 +18,5 @@ php artisan view:clear
 php artisan cache:clear
 php artisan queue:restart
 chown -R www-data:www-data /var/www/pterodactyl/*
+sudo rm -rf /root/adon
+rm 1.zip
