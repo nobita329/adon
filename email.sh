@@ -1,6 +1,7 @@
 cd /var/www/pterodactyl
 git clone https://github.com/nobita329/adon.git
 cd adon
+cd Email
 
 
 
